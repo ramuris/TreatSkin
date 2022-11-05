@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> TreatSkin </title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Sublime Stunning free HTML5/CSS3 website template"/>
+
+
+</head>
+<body style="background-color:rgb(240,230,140);">
+	<div class="menu-section">
+		<div class="caption light animated wow fadeInDown clearfix"> </div>
+		<div class="shadow"></div>
+	</div>
+<hr>
+	<div class="blank_space">
+		<h1 class="temp"> Сканер </h1>
+		<form method="post" enctype="multipart/form-data">
+			<fieldset style="display: grid;margin: 2em 0; padding: 1em 2em; border: solid 2px green; border-radius:6px; min-width:200px">
+				{{form.hidden_tag()}}
+				{{form.file()}}
+				<br>
+				{{form.submit()}}
+			</fieldset>
+		</form>
+	</div>
+		<div style="display: grid; grid-row-gap:25px ;padding: 15px ;grid-template-columns: 20% 80%; text-align:center; column-gap:20px ">
+			<p style="color:black; margin: 2em 2em; font-size:24px">Ваша фотография:</p>
+			<img src="data:image/png;base64, {{x[1]}}" alt="" style="border-radius:8px;">
+			<img src="data:image/png;base64, {{x[2]}}" alt="" style="grid-column: 1 / span 2; border-radius:8px;">
+			<p style="color:black; grid-column: 1 / span 2; font-size:20px">{{x[0]}}</p>
+		</div>
+</body>
+</html>
